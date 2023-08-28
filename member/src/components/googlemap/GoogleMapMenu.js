@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './reset.css';
-import './Test1.css';
+import './GoogleMapMenu.css';
 const Test = props => {
   const [ isTrue, setIsTrue ] = useState(true);
   const toggleMenu = () => {

@@ -1,6 +1,6 @@
 import headstyle from './usecomponents.module.css'
 import React,{useState} from 'react';
-import {Link} from'react-router-dom';
+import {Link} from 'react-router-dom';
 import './SideBar.css'
 import bar from './usecomponents.module.css'
 
