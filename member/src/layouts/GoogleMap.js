@@ -13,7 +13,6 @@ export default function GoogleMap() {
       <Header/>
       <Body/>
       <Outlet/>
-      <Footer/>
     </>
   )
 }
