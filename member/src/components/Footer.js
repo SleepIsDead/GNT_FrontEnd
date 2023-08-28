@@ -1,7 +1,6 @@
 import React from 'react';
-import ModalStyle from './modal/usemodalcomponent.module.css';
 import Resetcss from './modal/resetcss.css';
-
+import footerstyle from './usecomponents.module.css'
 export default function Footer() {
 
   return (
@@ -9,7 +8,7 @@ export default function Footer() {
     <div id='wrapper'>
     <footer className={footerstyle.footerstyle}>
       <img id="logo" src="../plane_airplane_icon.png" width="150px;" height="150px"></img>
-        <h5 className={footertextstyle.footertextstyle}>
+        <h5 className={footerstyle.footertextstyle}>
           경기도 성남시 수정수 대왕판교로 815 판교제2테크노밸리 기업지원허브 1층 메타버스 아카데미
           <br/>
           <br/>
