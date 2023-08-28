@@ -8,7 +8,7 @@ export default function KakaoLogin() {
         <>
         <div className={login.loginpage}>
             <div className={login.logo}>
-                <Link to="/"><img src = "../plane_airplane_icon.png"/></Link>
+                <Link to="/"><img src = "../logoimg1.png"/></Link>
             </div>
             <Link to=""><img className={login.kakaoImg} src = "../kakao_login_large_wide.png"/></Link>
         </div>

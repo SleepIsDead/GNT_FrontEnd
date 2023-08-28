@@ -2,11 +2,11 @@ import React from 'react';
 
 const PlanTableColumn = ({ children }) => {
   return (
-    <td className="plan-table-column">
+    <tr className="plan-table-column">
       {
         children
       }
-    </td>
+    </tr>
   )
 }
 
