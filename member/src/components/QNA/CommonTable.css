@@ -2,8 +2,10 @@
 .common-table {
   width: 80%;
   margin: 0 auto;
+  margin-top: 10px;;
   text-align: center;
   border-spacing: 0;
+  height: calc(100% - 190px);
 }
 
 .common-table-header-column {
