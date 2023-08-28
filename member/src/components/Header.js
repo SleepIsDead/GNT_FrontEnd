@@ -49,10 +49,10 @@ export default function Header() {
                         여행 비용
                     </div>
                     <div className = {bar.q}>
-                        1 : 1 문의하기
+                        <Link to="/QNAInsert">1 : 1 문의하기</Link>
                     </div>
                     <div className = {bar.qlist}>
-                        나의 문의내역
+                        <Link to="/QNAList"> 나의 문의내역</Link>
                     </div>
                 </div>
                 <div>
