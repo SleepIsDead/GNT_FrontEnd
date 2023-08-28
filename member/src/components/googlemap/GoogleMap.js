@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { GoogleMap, useLoadScript, MarkerF ,InfoWindow } from '@react-google-maps/api';
 const containerStyle = {
-  width: '1400px',
-  height: '780px'
+  width: '75%',
+  height: '100%',
+  displa : 'inline-block',
 };
 
 const center = {

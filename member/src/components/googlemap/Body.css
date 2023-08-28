@@ -1,0 +1,4 @@
+.googlemap_component {
+	height: calc(100% - 82px);
+	display: flex;
+}
