@@ -24,7 +24,7 @@ export default function Header() {
 
         <div>
             <header>
-                <img className={bar.logo} src="../plane_airplane_icon.png"/>
+                <Link to="/"><img className={bar.logo} src="../plane_airplane_icon.png"/></Link>
                 <nav className={headstyle.headstyle}>
                     <div className="header">
                         <ul className="header-wrapper">
