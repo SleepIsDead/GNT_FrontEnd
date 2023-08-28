@@ -1,3 +1,19 @@
+.plan-table-container {
+  width: 1092px;
+  margin: 0 auto;
+  position: relative;
+  min-height: calc(100% - 180px);
+  background-color: rgb(255, 255, 255);
+}
+
+.plan-table-header {
+  width: 100%;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 70px 0px 50px 100px;
+}
+
 .plan-table {
     width: 80%;
     margin: 0 auto;
@@ -19,5 +35,5 @@
   }
   
   .plan-table-column {
-    padding: 10px 5px;
+    padding: 15px 5px;
   }

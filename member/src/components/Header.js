@@ -24,13 +24,15 @@ export default function Header() {
 
         <div>
             <header>
-                <Link to="/"><img className={bar.logo} src="../plane_airplane_icon.png"/></Link>
+                <div className={bar.logo}>
+                <Link to="/"><img className={bar.logoimg} src="../logoimg1.png"/></Link>
+                </div>   
                 <nav className={headstyle.headstyle}>
                     <div className="header">
                         <ul className="header-wrapper">
                             <h3 onClick={showModal}>여행 계획하기</h3>
                             {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
-                            <li><Link to="/kakaoLogin"><img src="../person.png"/></Link></li>
+                            <li><Link to="/kakaoLogin"><img src="../loginimg2.png"/></Link></li>
                             <li><img src="../menubar.png" onClick={()=>toggleMenu()}/></li>
                         </ul>
                     </div>    
@@ -41,7 +43,7 @@ export default function Header() {
                     <div className={bar.close}>
                         <img src="../menubar.png" onClick={()=>toggleMenu()}/>
                     </div>
-                    <img width="150px" src = "../person.png" />
+                    <img width="150px" src = "../profileimg.png" />
                     <li>닉네임</li>
                     <li>닉네임 변경</li>
                 </article>
