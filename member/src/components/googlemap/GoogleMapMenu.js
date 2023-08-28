@@ -12,13 +12,13 @@ const Test = props => {
         <div className='top'>
           <div className='top_menu'>
             <div className='top_menu_left'>
-              <div className={isTrue ? "top_menu_left" : "white_color"}>
+              <div className={isTrue ? "top_menu_left" : "white_color"} onClick={toggleMenu}>
                 <p onClick={toggleMenu}>일정표</p>
               </div>
             </div>
             <div className='top_menu_right'>
-              <div className={isTrue ? "white_color" : "top_menu_right"}>
-                <p onClick={toggleMenu}>검색</p>
+              <div className={isTrue ? "white_color" : "top_menu_right"} onClick={toggleMenu}>
+                <p >검색</p>
               </div>
             </div>
           </div>
