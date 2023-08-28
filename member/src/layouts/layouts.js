@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import {Outlet} from 'react-router-dom'
 import Body from "../components/Body";
 
+
 import React from 'react'
 
 export default function Layouts() {

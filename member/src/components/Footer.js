@@ -1,9 +1,11 @@
-import React from 'react'
-import footertextstyle from './usecomponents.module.css';
-import footerstyle from './usecomponents.module.css';
+import React from 'react';
+import ModalStyle from './modal/usemodalcomponent.module.css';
+import Resetcss from './modal/resetcss.css';
 
 export default function Footer() {
+
   return (
+
     <div id='wrapper'>
     <footer className={footerstyle.footerstyle}>
       <img id="logo" src="../plane_airplane_icon.png" width="150px;" height="150px"></img>
@@ -17,6 +19,7 @@ export default function Footer() {
           Copyright(C)Team Sleep After Die all rights reserved.
         </h5>
     </footer>
+
     </div>
-  );
-}
+)
+};
