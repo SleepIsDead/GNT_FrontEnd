@@ -1,0 +1,168 @@
+.modalContainer {
+
+    width: 600px;
+    height: 460px;
+    border: 1px solid black;
+    background-color: #F2EEEE;
+}
+
+.modalHeader {
+
+    width: 600px;
+    height: 60px;
+    /* border-bottom: 1px solid black; */
+    background-color: white;
+    display: flex;
+}
+
+.modalContent {
+    background-color: #F2EEEE;
+    width: 600px;
+    height: 390px;
+    /* border: 1px solid black; */
+    display:flex;
+}
+
+.modalText1 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.sideContent {
+    width : 120px;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: inline-block;
+    align-content: space-around;
+    text-align: center;
+}
+
+.mainContent { 
+    width : 475px;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: inline-block;
+}
+
+.liStyle li {
+    height: 30px;
+    margin-top: 50px;
+}
+
+.mainContent input {
+    display: block;
+}
+
+.mainContent ul li {
+    height: 30px;
+    margin-top: 50px;
+}
+
+.buttonStyle {
+    margin-left: 20px;
+    height: 38px;
+    width: 117px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+    border: 0px;
+}
+
+.buttonContent {
+    margin-right: 20px;
+    text-align: end;
+}
+
+.inputText1 {
+    width: 400px;
+}
+
+.liStyle2 li {
+    height: 30px;
+    margin-top: 26px;
+}
+
+.mainContent2 ul li {
+    height: 30px;
+    margin-top: 25px;
+}
+
+.buttonContent2 {
+    text-align: end;
+    margin-left: 150px;
+}
+
+.inputText2 {
+    width: 400px;
+    height: 40px;
+    border: 0px;
+    border-radius: 5%;
+}
+
+.buttonStyle2 {
+    background-color: white;
+    width: 70px;
+    margin-left: 80px;
+    border: 0px;
+    border-radius: 5%;
+}
+
+.buttonStyle3 {
+    background-color: white;
+    width: 70px;
+    margin-left: 80px;
+    margin-top: 6px;
+    border: 0px;
+    border-radius: 5%;
+}
+
+.buttonStyle4 {
+    background-color: white;
+    width: 70px;
+    border: 0px;
+    border-radius: 5%;
+}
+
+.inputStyle1 {   
+    border: 0px;
+    border-radius: 5%;
+}
+
+.buttonStyle5 {
+    border-radius: 5%;
+    margin-left: 20px;
+    height: 38px;
+    width: 70px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+    border: 0px;
+}
+
+.liStyle3 li {
+    height: 30px;
+    margin-top: 100px;
+}
+
+.liStyle4 {
+    margin-top: 200px;
+}
+
+.inputTextType {
+    margin-top: 150px;
+}
+
+.buttonStyle6 {
+    border-radius: 5%;
+    margin-left: 20px;
+    height: 38px;
+    width: 70px;
+    text-align: center;
+    margin-top: 220px;
+    background-color: white;
+    border: 0px;
+}
+
+
+
+

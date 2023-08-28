@@ -1,19 +1,37 @@
-import React from 'react'
-import footertextstyle from './usecomponents.module.css';
-import footerstyle from './usecomponents.module.css';
+import React from 'react';
+import ModalStyle from './modal/usemodalcomponent.module.css';
+import Resetcss from './modal/resetcss.css';
 
 export default function Footer() {
+
   return (
-    <div className={footerstyle.footerstyle}>
-        <h5 class={footertextstyle.footertextstyle}>
-          경기도 성남시 수정수 대왕판교로 815 판교제2테크노밸리 기업지원허브 1층 메타버스 아카데미
-          <br/>
-          <br/>
-          TEL : 02-317-6144 / FAX : 02-317-6062 
-          <br/>
-          <br/>
-          Copyright(C)Team Sleep After Die all rights reserved.
-        </h5>
+    <div className={ModalStyle.modalContainer}>
+        <div className={ModalStyle.modalHeader}>
+          <h3 className={ModalStyle.modalText1}>닉네임 변경</h3>
+        </div>
+        <div className={ModalStyle.modalContent}>
+            <div className={ModalStyle.sideContent}>
+              <ul className={ModalStyle.liStyle3}>
+                <li>현재 닉네임 : </li>
+                <li>변경 닉네임 : </li>
+              </ul>
+            </div>
+            <div className={ModalStyle.mainContent2}>
+                <ul className={ModalStyle.liStyle3}>
+                <li>
+                111111
+                </li>
+                <li>
+                <input type="text" className={ModalStyle.inputTextType}></input>
+                </li>
+                </ul>
+                <div className={ModalStyle.buttonContent2}>
+                <button className={ModalStyle.buttonStyle6}>등록</button>
+                <button className={ModalStyle.buttonStyle6}>취소</button>
+                </div>
+            </div>
+            
+        </div>
     </div>
-  );
-}
+)
+};
