@@ -22,7 +22,7 @@ export default function Header() {
                 <nav className={headstyle.headstyle}>
                     <div className="header">
                         <ul className="header-wrapper">
-                            <h3>여행 계획하기</h3>
+                            <h3><Link to="/googlemap">여행 계획하기</Link></h3>
                             <li><Link to="/kakaoLogin"><img src="../person.png"/></Link></li>
                             <li><img src="../menubar.png" onClick={()=>toggleMenu()}/></li>
                         </ul>

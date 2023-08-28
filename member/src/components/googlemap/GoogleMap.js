@@ -6,7 +6,7 @@ const mapStyle = {
   height: '100vh',
 };
 
-const Map = props => {
+function Map (){
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: 'AIzaSyBnBcEFs_o9xPHgartVyWKBkhsM9-ztLYc',
@@ -44,4 +44,4 @@ const Map = props => {
   );
 };
 
-export default Map;
+export default React.memo(Map);

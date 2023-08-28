@@ -1,6 +1,6 @@
 @import "reset.css";
 
-header {
+html body header {
     width: 100%;
     height: 80px;
     background: #ecfbff;
