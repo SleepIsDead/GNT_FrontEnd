@@ -1,10 +1,16 @@
 import React from 'react';
-import ModalStyle from './modal/usemodalcomponent.module.css';
-import Resetcss from './modal/resetcss.css';
+import ModalStyle from '../modal/usemodalcomponent.module.css';
+import Resetcss from '../modal/resetcss.css';
 
-export default function CreatePlan() {
+function CreatePlan({ setModalOpen}) {
+
+    const closeModal = () => {
+      setModalOpen(false);
+    };
+
     return (
         <div className={ModalStyle.modalContainer}>
+          <button className={ModalStyle.close} onClick={closeModal}>X</button>
             <div className={ModalStyle.modalHeader}>
               <h3 className={ModalStyle.modalText1}>새 계획 만들기</h3>
             </div>
@@ -41,5 +47,7 @@ export default function CreatePlan() {
                 
             </div>
         </div>
-    )
-};
+    );
+}
+
+export default CreatePlan;

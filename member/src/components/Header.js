@@ -3,15 +3,21 @@ import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
 import './SideBar.css'
 import bar from './usecomponents.module.css'
+import CreatePlan from './modal/CreatePlan';
 
 
 
 export default function Header() {
 
     const [isOpen, setMenu] = useState(false);  
+    const [modalOpen, setModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenu(isOpen => !isOpen); 
+  }
+
+  const showModal = () => {
+    setModalOpen(true);
   }
 
     return (
@@ -22,7 +28,8 @@ export default function Header() {
                 <nav className={headstyle.headstyle}>
                     <div className="header">
                         <ul className="header-wrapper">
-                            <h3><Link to="/googlemap">여행 계획하기</Link></h3>
+                            <h3 onClick={showModal}>여행 계획하기</h3>
+                            {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
                             <li><Link to="/kakaoLogin"><img src="../person.png"/></Link></li>
                             <li><img src="../menubar.png" onClick={()=>toggleMenu()}/></li>
                         </ul>
