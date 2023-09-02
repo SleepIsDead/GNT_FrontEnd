@@ -21,7 +21,7 @@ const markers = [];
 
 function MyComponent() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyB8r1IYnO2ly8v6OMgx1q2ljunzS-buFlA',
+    googleMapsApiKey: '',
     libraries: ["places"]
   });
   
