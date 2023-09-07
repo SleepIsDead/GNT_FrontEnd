@@ -16,6 +16,22 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <div className='main_content_dep'>
+        <div className='main_content_dep1'>
+          <div className='main_content_dep2 content_top'>
+            <div>
+              <h1>추천 일정</h1>
+            </div>
+            <div>
+              <h3>더보기 {'>'}</h3>
+            </div>
+          </div>
+          <hr/>
+          <div className='main_content_dep2 content_under'>
+
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

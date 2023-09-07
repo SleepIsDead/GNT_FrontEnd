@@ -51,7 +51,7 @@ header nav ul {
     align-items: center;
 }
 
-h3 {
+header nav ul h3 {
     font-size: 20px;
     font-weight: bold;
     margin-inline-end: 200px;

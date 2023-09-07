@@ -39,9 +39,49 @@
 }
 
 .main_banner_text_btn{
-    width: 40%;
+    width: 38%;
     border: 1px solid white;
-    height: 20%;
-    display: inline-block;
+    height: 18%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
     margin-top: 100px;
+    
+}
+.main_banner_text_btn p{
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+.main_banner_text_btn:hover{
+    background-color: gray;
+    opacity: 0.6;
+}
+.main_content_dep{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.main_content_dep >div{
+    width: 100%;    
+}
+.main_content_dep2 >div{
+    display: inline-block;
+}
+.main_content_dep >div h3,.main_content_dep >div h1{
+    display: inline-block;
+}
+.main_content_dep >div h1{
+    font-size: 30px;
+}
+.main_content_dep >div h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.content_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
