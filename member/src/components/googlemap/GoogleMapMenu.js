@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Kakao from './KakaoMap'
 import './reset.css';
 import './GoogleMapMenu.css';
 const Test = props => {
   const [ isTrue, setIsTrue ] = useState(true);
+
+  const [InputText, setInputText] = useState('')
+  const [Place, setPlace] = useState('')
+
+  const onChangeHadler = (e) => {
+    setInputText(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setPlace(InputText)
+    setInputText('')
+  }
   const toggleMenu = () => {
     setIsTrue(!isTrue);
   }
   return (
     <>
+      <Kakao searchPlace={Place}/>
         <div className='top'>
           <div className='top_menu'>
             <div className='top_menu_left'>
@@ -52,7 +67,9 @@ const Test = props => {
           </div>
           <div className={isTrue ? "top_dep_1_content_right" : "top_dep_1_content_right display_none"}>
             <div className='search_content'>
-              <input type='text' className='search_place'/><button>검색</button>
+              <form className="inputForm" onSubmit={handleSubmit}>
+                <input type="text" placeholder="검색어를 입력하세요" onChange={onChangeHadler} value={InputText} className='search_place'/><button type="submit">검색</button>
+              </form>
             </div>
             <div className='search_result'>
               <div className='search_result_tap'>
