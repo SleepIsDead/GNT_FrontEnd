@@ -2,12 +2,24 @@
 
 html body header {
     width: 100%;
-    height: 80px;
-    background: #ecfbff;
+    height: 100%;
+    background: #f7fbfc;
     color: rgb(0, 0, 0);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-around;
     align-items: center;
+}
+.mainheader{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    z-index: 100;
+}
+.footerwrap{
+    position: relative;
+    width: 100%;
+    top: calc(100% + 10vh);
+    z-index: 98;
 }
 
 .footertextstyle {
@@ -19,48 +31,122 @@ html body header {
 .footerstyle {
     bottom:0px;
     height: 100px;
-    background: #ecfbff;
+    background: #f7fbfc;
     position: relative;
     display: flex;
     align-items: center;
 }
 
-header img {
-    width: 60px;
-    height: 60px;
+header > div{
+    width: 22%;
+    height: 100%;
+}
+header > div > a{
+    height: 92%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+header > div > a > img{
+    width: 90%;
+    height: 74%;
     cursor: pointer;
 }
 
-header .logo {
-    width: 60px;
-    height: 60px;
-    margin-left: 280px;
-    cursor: pointer;
-    display:flex
+header .hamburgerbtn{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;    
 }
 
-.logoimg {
-    width: 300px;
-    height: 60px;
+header .hamburgerbtn img{
+    width: 60%;
+    height: 90%;
+    cursor: pointer;
+    /* border: 1px solid; */
+    border-radius: 0.5vw;
 }
+
+header .hamburgerbtn img:hover{
+    background-color: rgba(0,0,0,0.12);
+}
+
 
 header nav ul {
     display: flex;
     list-style: none;
-    margin-right: 246px;
+    align-items: center;
+    width: 38%;
+    height: 100%;
+    justify-content: space-between;
+}
+header nav>ul>li {
+    width: 42%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+header nav>ul>li a{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+header nav {
+    display: flex;
+    width: 22%;
+    height: 100%;
+}
+.header{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
-header nav ul h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-inline-end: 200px;
+header nav h3 {
+    letter-spacing: 0.16vw;
+    font-weight: 500;
+    font-family: 'BMJUA';
+    font-size: 1.5vw;
     cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: rgb(0 0 0);
+    position: relative;
+    overflow: hidden;
+}
+header nav h3:hover{
+
+    text-shadow: 0.3px 0.3px 0.3px #686868;
+}
+header nav h3::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(255,255,255,1));
+    width: 1.45vw;
+    height: 200%;
+    transform: rotateZ(30deg);
+    transition: 0.6s;
+    opacity: 0.4;
+    left: -1.5vw;
 }
 
+header nav h3:hover::before {
+    width: 1.4vw;
+    height: 100%;
+    opacity: 1;
+    left: 10vw;
+}
+
+
+
 footer img {
-    width: 120px;
-    height: 100px;
+    width: 130px;
+    height: 80px;
     margin-right: 15px;
     margin-left: 400px;
 }
@@ -86,12 +172,12 @@ h4 {
     display: flex;
 }
 
-ul {
+header ul {
     justify-content: center;
     text-align: center;
 }
 
-ul > article {
+header ul > article {
     padding-top: 9px;
 }
 
@@ -102,37 +188,89 @@ ul > article > div {
 article > li {
     line-height: 40px;
 }
-
-article > .close img {
-    width: 60px;
-    height: 60px;
+.close{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    /* place-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    place-items: center;
+    font-family: "BMJUA";
+}
+.close img{
+    width: 14.5%;
+    height: 51.5%;
+    cursor: pointer;
+    border-radius: 0.5vw;
+}
+.close img:hover{
+    background-color: rgba(0,0,0,0.12);
 }
 
+.mainheader article{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-evenly;
+    padding-top: 1em;
+    width: 100%;
+    height: 28%;
+}
+.mainheader article> div{
+    width: 32%;
+    height: 46%;
+    border-radius: 50em;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.mainheader article> div img{
+    width: 90%;
+    height: 90%;
+}
+.mainheader article>ul{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.mainheader article li{
+    height: 30%;
+    display: grid;
+    align-items: center;
+    font-family: BMJUA;
+}
+.mainmenudep{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 88%;
+}
 .menuList {
-    margin-top: 40px;
-    width: 200px;
-    height: 300px;
-    text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-evenly;
+    padding-top: 1em;
+    width: 100%;
+    height: 48%;
+    font-family: "BMJUA";
 }
 
 .menuList > div {
-    width: 105px;
-    margin-top: 20px;
+    width: 52%;
+    height: 10%;
     background-color: rgb(216, 234, 237);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    display: inline-block;
+    border-radius: 1em;
+    display: flex;
+    place-content: center;
+    place-items: center;
 }
 
 .menuList > .plan {
     margin-top: 0;
-}
-
-.logout {
-    padding: 10px;
-    background-color: rgb(216, 234, 237);
-    border-radius: 10px;
-    display: inline-block;
 }
