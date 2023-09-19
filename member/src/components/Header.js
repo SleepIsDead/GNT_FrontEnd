@@ -31,16 +31,17 @@ export default function Header() {
                     <div className={headstyle.header}>
                         <h3 onClick={showModal}>여행 계획하기</h3>
                         <ul className="header-wrapper">                            
-                            {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
-                            <li className={headstyle.hamburgerbtn}><img className={isOpen ? "hide-btn" : "show-btn"} src="../upArrow.png" onClick={()=>toggleMenu()}/></li>
+                            
+                            <li className={headstyle.hamburgerbtn}><img className={isOpen ? "hide-btn" : "show-btn"} src="../downArrow.png" onClick={()=>toggleMenu()}/></li>
                         </ul>
                     </div>    
                 </nav>
+                {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
             </header>
             <ul className={isOpen ? "show-menu" : "hide-menu"}> 
                 <li className={bar.close}>
-                    <img src="../downArrow.png" onClick={()=>toggleMenu()}/>
-                    <p>로그아웃</p>
+                    <img src="../upArrow.png" onClick={()=>toggleMenu()}/>
+                    <p>로그인/로그아웃</p>
                 </li>
                 <div className={bar.mainmenudep}>
                     <article>
@@ -59,7 +60,7 @@ export default function Header() {
                             <Link to="/myplanList">나의 여행</Link>
                         </div>
                         <div className = {bar.money}>
-                            여행 비용
+                            가계부
                         </div>
                         <div className = {bar.q}>
                             <Link to="/QNAInsert">1 : 1 문의하기</Link>

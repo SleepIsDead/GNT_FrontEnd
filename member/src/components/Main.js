@@ -1,22 +1,69 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Main.css'
+import { useState } from 'react';
 
 export default function Main() {
+  useEffect(() => {
+    let bannerWidth = 0;
+    let bannerMV = setInterval(() => {
+        bannerHandlerNext();
+    }, 4500);
+
+    function bannerHandlerNext(){
+      bannerWidth = bannerWidth-100;
+      if(bannerWidth < -200){
+        bannerWidth =0
+      }
+      document.getElementsByClassName("main_banner_wrap")[0].style.left=bannerWidth+"%";
+    }
+
+    return()=>{
+      clearInterval(bannerMV);
+    };
+  },[])
+  
+
   return (
     <div className='main_content'>
-      <div className='main_banner'>
-        <div className='main_banner_text'>
-          <div className='main_banner_text_1'>
-            <h1>트래블 메이커</h1>
-            <h3>나만의 여행 플래너</h3>
-            <h4>나만의 여행 플래너는 원하는 곳만 쏙쏙 골라 직접 여행 일정을 계획하는 여행 도우미입니다</h4>
+      <div className='main_banner_wrap bg_1'>          
+          <div className='main_banner'>
+            <div className='main_banner_text'>
+              <div className='main_banner_text_1'>
+                <h3>당신만의 맞춤 여행을 만들어보세요</h3>
+              </div>
+              <div className='main_banner_text_btn'>
+                <a>
+                  <p>새일정 만들기</p>
+                </a>
+              </div>
+            </div>  
           </div>
-          <div className='main_banner_text_btn'>
-            <a>
-              <p>새 일정 만들기</p>
-            </a>
+          
+          <div className='main_banner bg_2'>
+            <div className='main_banner_text'>
+              <div className='main_banner_text_1'>
+                <h3>여행 중 예산 걱정은 이제 그만</h3>
+              </div>
+              <div className='main_banner_text_btn'>
+                <a>
+                  <p>가계부</p>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <div className='main_banner bg_3'>
+            <div className='main_banner_text'>
+              <div className='main_banner_text_1'>
+                <h3>질문이나 도움이 필요하신가요?</h3>
+              </div>
+              <div className='main_banner_text_btn'>
+                <a>
+                  <p>문의하기</p>
+                </a>
+              </div>
+            </div>
+          </div>
       </div>
       <div className='main_content_dep'>
         <div className='main_content_dep1'>

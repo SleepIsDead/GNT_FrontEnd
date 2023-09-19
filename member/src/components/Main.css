@@ -4,10 +4,18 @@
     width: 100%;
     top: 10vh;
     z-index: 99;
+    overflow: hidden;
 }
-
+.main_banner_wrap{
+    display: flex;
+    width: 300%;
+    position: relative;
+    left: 0;
+    transition: 1s;
+    
+}
 .main_banner{
-    background-image: url("./blueocean.jpg");;
+    background-image: url("./blueocean.jpg");
     width: 100%;
     height: calc(100vh - 150px);
     max-height: 680px;
@@ -16,10 +24,18 @@
     background-size: cover;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
+.bg_2{
+    background-image: url("../image/bannerbg3.jpg");    
+}
+
+.bg_3{
+    background-image: url("../image/bannerbg2.jpg");    
+}
+
 .main_banner_text{
     height: 60%;
     display: grid;
@@ -33,18 +49,18 @@
 }
 
 .main_banner_text h3{
-    font-size : 3.2vw;
+    font-size: 2.5vw;
     color: white;
-    line-height: 150px;
+    line-height: 20vh;
     font-family: 'BMJUA';
 }
 
 .main_banner_text h4{
-    font-size : 0.8vw;
+    font-size: 1.8vw;
     font-weight: normal;
-    color: white;  
-    font-family: 'BMJUA'; 
-    letter-spacing: 0.2vw; 
+    color: white;
+    font-family: 'BMJUA';
+    letter-spacing: 0.2vw;
 }
 
 .main_banner_text_btn{
@@ -53,8 +69,7 @@
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    height: 74%;
-    border-radius: 1.3vw;
+    height: 40%;
     
 }
 .main_banner_text_btn a{
@@ -65,7 +80,7 @@
     cursor: pointer;
 }
 .main_banner_text_btn p{
-    font-size: 18px;
+    font-size: 1.1em;
     color: white;
     font-weight: 400;
     font-family: 'BMJUA';

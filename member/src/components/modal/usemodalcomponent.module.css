@@ -6,14 +6,25 @@
     background-color: #F2EEEE;
     z-index: 999;
 
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     border : 1px solid black;
+    font-family: "BMJUA";
 }
+.modalbg{
+    width: 100%;
+    height: 300vh;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.6);
 
+    position: fixed;
+}
+.modalContainer button{
+    font-family: "BMJUA";
+}
 .modalHeader {
 
     width: 600px;
@@ -24,7 +35,7 @@
 }
 
 .modalContent {
-    background-color: #F2EEEE;
+    background-color: #f2f3f7;
     width: 600px;
     height: 390px;
     /* border: 1px solid black; */
