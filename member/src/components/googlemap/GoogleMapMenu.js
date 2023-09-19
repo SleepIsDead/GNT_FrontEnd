@@ -3,24 +3,40 @@ import { Link } from 'react-router-dom';
 import Kakao from './KakaoMap'
 import './reset.css';
 import './GoogleMapMenu.css';
+import KakaoMapItem from './KakaoMapItem';
+const { kakao } = window
 const Test = props => {
   const [ isTrue, setIsTrue ] = useState(true);
-
+  const [results,setResults] = useState([])
   const [InputText, setInputText] = useState('')
   const [Place, setPlace] = useState('')
 
+  useEffect(() => {
+    const ps = new kakao.maps.services.Places()
+
+    ps.keywordSearch(Place, placesSearchCB)
+
+    function placesSearchCB(data, status, pagination) {
+      if (status === kakao.maps.services.Status.OK) {
+        console.log(data);
+        setResults(data);
+      }
+    }
+  },[Place])
   const onChangeHadler = (e) => {
     setInputText(e.target.value)
   }
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     setPlace(InputText)
-    setInputText('')
+    setInputText('')    
   }
   const toggleMenu = () => {
     setIsTrue(!isTrue);
   }
+
+  
   return (
     <>
       <Kakao searchPlace={Place}/>
@@ -72,21 +88,7 @@ const Test = props => {
               </form>
             </div>
             <div className='search_result'>
-              <div className='search_result_tap'>
-                보여줄 내용
-              </div>
-              <div className='search_result_tap'>
-                보여줄 내용
-              </div>
-              <div className='search_result_tap'>
-                보여줄 내용
-              </div>
-              <div className='search_result_tap'>
-                보여줄 내용
-              </div>
-              <div className='search_result_tap'>
-                보여줄 내용
-              </div>
+              {results.map(item => <KakaoMapItem key={item.id} item={item}/>)}
             </div>
           </div>
         </div>

@@ -22,52 +22,53 @@ export default function Header() {
 
     return (
 
-        <div>
+        <div className={headstyle.mainheader}>
             <header>
                 <div className={bar.logo}>
-                <Link to="/"><img className={bar.logoimg} src="../logoimg1.png"/></Link>
+                <Link to="/"><img className={bar.logoimg} src="../travel-maker.png"/></Link>
                 </div>   
                 <nav className={headstyle.headstyle}>
-                    <div className="header">
-                        <ul className="header-wrapper">
-                            <h3 onClick={showModal}>여행 계획하기</h3>
-                            {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
-                            <li><Link to="/kakaoLogin"><img src="../loginimg2.png"/></Link></li>
-                            <li><img src="../menubar.png" onClick={()=>toggleMenu()}/></li>
+                    <div className={headstyle.header}>
+                        <h3 onClick={showModal}>여행 계획하기</h3>
+                        <ul className="header-wrapper">                            
+                            
+                            <li className={headstyle.hamburgerbtn}><img className={isOpen ? "hide-btn" : "show-btn"} src="../downArrow.png" onClick={()=>toggleMenu()}/></li>
                         </ul>
                     </div>    
                 </nav>
+                {modalOpen && <CreatePlan setModalOpen={setModalOpen}/>}
             </header>
             <ul className={isOpen ? "show-menu" : "hide-menu"}> 
-                <article>
-                    <div className={bar.close}>
-                        <img src="../menubar.png" onClick={()=>toggleMenu()}/>
+                <li className={bar.close}>
+                    <img src="../upArrow.png" onClick={()=>toggleMenu()}/>
+                    <p>로그인/로그아웃</p>
+                </li>
+                <div className={bar.mainmenudep}>
+                    <article>
+                        <div>
+                            <img src = "../plus.png" />
+                        </div>
+                        <ul>
+                            <li>어쩌구 유저 닉네임</li>
+                        </ul>
+                    </article>
+                    <div className={bar.menuList}>
+                        <div className = {bar.plan}>
+                            여행 계획하기
+                        </div>
+                        <div className = {bar.myplan}>
+                            <Link to="/myplanList">나의 여행</Link>
+                        </div>
+                        <div className = {bar.money}>
+                            가계부
+                        </div>
+                        <div className = {bar.q}>
+                            <Link to="/QNAInsert">1 : 1 문의하기</Link>
+                        </div>
+                        <div className = {bar.qlist}>
+                            <Link to="/QNAList"> 나의 문의내역</Link>
+                        </div>
                     </div>
-                    <img width="150px" src = "../profileimg.png" />
-                    <li>닉네임</li>
-                    <li>닉네임 변경</li>
-                </article>
-                <div className={bar.menuList}>
-                    <div className = {bar.plan}>
-                        여행 계획하기
-                    </div>
-                    <div className = {bar.myplan}>
-                        <Link to="/myplanList">나의 여행</Link>
-                    </div>
-                    <div className = {bar.money}>
-                        여행 비용
-                    </div>
-                    <div className = {bar.q}>
-                        <Link to="/QNAInsert">1 : 1 문의하기</Link>
-                    </div>
-                    <div className = {bar.qlist}>
-                        <Link to="/QNAList"> 나의 문의내역</Link>
-                    </div>
-                </div>
-                <div>
-                    <li className={bar.logout}>
-                        로그아웃
-                    </li>
                 </div>
             </ul>
         </div>

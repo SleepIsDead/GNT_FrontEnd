@@ -177,16 +177,28 @@ html,body,#root,.App{
 }
 .top_dep_1_content_right .search_result{
 	height: calc(100% - 66px);
-	flex-direction: column;
-	align-items: center;
-	display: inline-block;
+    display: grid;
+    justify-items: center;
+    overflow-y: scroll;
 }
-
+.result_name{
+	display: grid;
+    height: 100%;
+    align-items: center;
+}
+.add_result{
+	display: grid;
+    align-items: center;
+	margin-left: 10px;
+}
 .search_result_tap {
-	width: 80%;
-	display: inline-block;
+	
+	border-radius: 10px;
+	width: 300px;
+	display: flex;
 	padding: 0 25px;
-	border: 1px solid black;
-	height: 15%;
-	margin: 5px;	
+	border: 2px solid #67c9cc;
+	height: 80px;
+	margin-top: 25px;	
+	justify-content: space-between;
 }

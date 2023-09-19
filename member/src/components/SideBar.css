@@ -1,20 +1,37 @@
 
 .show-menu{
-    width: 306px;
-    background-color: rgb(183, 211, 217);
+    width: 18.6%;
+    padding: 0 1%;
+    background-color: #f7fbfc;
     height: 100%;
     float: right;
-    position: absolute;
+    position: fixed;
     right: 0px;
     z-index: 999;
-    top:0;
+    top: 0;
+    transition: 1.4s;
 }
     
 .hide-menu{
-    display: none;
-    width: 300px;
-    height: 500px;
-    position: absolute;
-    right: -300px;
+    position: fixed;
+    width: 18.6%;
+    padding: 0 1%;
+    height: 100%;
+    float: right;
+    right: 0;
+    top:-100%;
+    transition: 1.4s;
+    pointer-events: none;
+}
+
+.show-btn{
+    opacity: 1;
+    transition: 2.0s;
+}
+
+.hide-btn{
+    opacity: 0;
+    transition: 2.0s;
+    pointer-events: none;
 }
 
